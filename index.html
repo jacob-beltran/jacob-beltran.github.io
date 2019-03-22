@@ -1,141 +1,248 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Jacob Beltran</title>
-  <meta name="description" content="Frontend Web Developer">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		html {
-			font-family: system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
-			color: #fff;
-			background-color: #1e2022;
-			background-size: cover;
-			background-image: repeating-linear-gradient(
-														transparent,
-														transparent 2px,
-														rgba(0,0,0,0.115) 2px,
-														rgba(0,0,0,0.115) 4px
-												),
-												linear-gradient(to top, #2b4353, #1e2022);
-			font-size: calc( 16px + 0.45vw );
-			-webkit-font-smoothing: antialiased;
-			box-sizing: border-box;
-			text-align: center;
-			min-height: 100vh;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: flex-start;
-		}
-		* {
-			box-sizing: inherit;
-		}
-		body {
-			display: flex;
-			width: 100%;
-			flex-direction: column;
-			justify-content: space-around;
-			align-items: center;
-			min-height: 32vh;
-			margin-top: 7vmin;
-		}
-		h1 {
-			margin-top: 1.5rem;
-			margin-bottom: 1.25rem;
-			font-size: 1.75rem;
-			letter-spacing: 0.185em;
-			white-space: nowrap;
-			font-weight: 100;
-			color: #9AECDB;
-			text-transform: uppercase;
-			text-align: center;
-			user-select: none;
-		}
-		h2 {
-			margin: 0;
-			font-weight: 300;
-			font-size: 0.85rem;
-			letter-spacing: 0.165em;
-			text-transform: uppercase;
-			color: #F97F51;
-		}
-		nav {
-			display: grid;
-			width: 100%;
-			justify-content: center;
-			place-items: center;
-			padding-top: 2rem;
-			padding-bottom: 2rem;
-			grid-gap: calc(0.5rem + 1.5vw);
-			grid-template-columns: repeat(auto-fit, 8rem);
-			grid-auto-rows: 8rem;
-		}
-		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: calc(7rem + 1vw);
-			max-width: 8rem;
-			height: calc(7rem + 1vw);
-			max-height: 8rem;
-			border-radius: 50%;
-			padding: 4px;
-			font-size: 0.925rem;
-			font-weight: 300;
-			letter-spacing: 0.125em;
-			color: rgba(255,255,255,0.85);
-			text-decoration: none;
-			border-width: 0.075rem;
-			border-style: solid;
-			text-transform: uppercase;
-			-webkit-tap-highlight-color: transparent;
-		}
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Jacob Beltran</title>
+    <meta name="description" content="Frontend Web Developer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      html {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Roboto', sans-serif;
+        color: #fff;
+        background-color: #1e2022;
+        background-size: cover;
+        background-image: repeating-linear-gradient(
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.115) 2px,
+            rgba(0, 0, 0, 0.115) 4px
+          ),
+          linear-gradient(to top, #122b3b, #1e2022);
+        font-size: calc(16px + 0.45vw);
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      html::before {
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        background-color: #1e2022;
+        animation: background-reveal 750ms linear 0ms 1 both;
+      }
+      * {
+        box-sizing: inherit;
+      }
+      body {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 32vh;
+        margin-top: 7vmin;
+      }
+      h1 {
+        margin-top: 1.5rem;
+        margin-bottom: 1.25rem;
+        font-size: 1.75rem;
+        letter-spacing: 0.185em;
+        white-space: nowrap;
+        font-weight: 100;
+        color: #9aecdb;
+        text-transform: uppercase;
+        text-align: center;
+        user-select: none;
+        animation: text-reveal 450ms ease-out 150ms 1 backwards;
+      }
+      h2 {
+        margin: 0;
+        font-weight: 300;
+        font-size: 0.85rem;
+        letter-spacing: 0.165em;
+        text-transform: uppercase;
+        color: #f97f51;
+        animation: text-reveal 350ms ease-out 350ms 1 backwards;
+      }
+      nav {
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        place-items: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        grid-gap: calc(1rem + 1.25vw);
+        grid-template-columns: repeat(auto-fit, 9rem);
+        grid-auto-rows: 9rem;
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(7.5rem + 1.5vw);
+        max-width: 9rem;
+        height: calc(7.5rem + 1.5vw);
+        max-height: 9rem;
+        border-radius: 50%;
+        padding: 4px;
+        font-size: 0.925rem;
+        font-weight: 300;
+        letter-spacing: 0.125em;
+        color: rgba(255, 255, 255, 0.85);
+        text-decoration: none;
+        border-width: 0.075rem;
+        border-style: solid;
+        text-transform: uppercase;
+        -webkit-tap-highlight-color: transparent;
+        animation: link-reveal 400ms ease-out 500ms 1 backwards;
+      }
 
-		.github { border-color: #0be881; }
-		.github:active { color: #0be881; }
+      .github {
+        border-color: #0be881;
+      }
+      .github:active {
+        color: #0be881;
+      }
 
-		.codepen { border-color: #a74faf; }
-		.codepen:active { color: #a74faf; }
+      .codepen {
+        border-color: #a74faf;
+        animation-delay: 575ms;
+      }
+      .codepen:active {
+        color: #a74faf;
+      }
 
-		.medium { border-color: #ff5e57; }
-		.medium:active { color: #ff5e57; }
+      .medium {
+        border-color: #ff5e57;
+        animation-delay: 650ms;
+      }
+      .medium:active {
+        color: #ff5e57;
+      }
 
-		.twitter { border-color: #0fbcf9; }
-		.twitter:active { color: #0fbcf9; }
+      .twitter {
+        border-color: #0fbcf9;
+        animation-delay: 725ms;
+      }
+      .twitter:active {
+        color: #0fbcf9;
+      }
 
-		.linkedin { border-color: #ffa801; }
-		.linkedin:active { color: #ffa801; }
+      .linkedin {
+        border-color: #ffa801;
+        animation-delay: 800ms;
+      }
+      .linkedin:active {
+        color: #ffa801;
+      }
 
-		a:hover {
-			background-color: rgba(255,255,255,0.035);
-			color: rgba(255,255,255,0.975);
-		}
-		a:active {
-			background-color: rgba(0,0,0,0.15);
-		}
+      nav a:link:active {
+        color: #fff;
+        padding-bottom: 8px;
+        font-weight: 300;
+        letter-spacing: 0.125em;
+        text-shadow: none;
+        opacity: 0.75;
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.3), inset 0 0 0 9rem rgba(0, 0, 0, 0.3);
+      }
 
-		@keyframes background-gradient {
-			0% {
-				opacity: 1;
-				transform: translate3d(0,0,0);
-			}
-			100% {
-				opacity: 0;
-				transform: translate3d(100%,100%,0);
-			}
-		}
-	</style>
-</head>
+      @media (hover: none) {
+        .github:active {
+          background-color: rgba(11, 232, 129, 0.075);
+        }
+        .codepen:active {
+          background-color: rgba(167, 79, 175, 0.075);
+        }
+        .medium:active {
+          background-color: rgba(255, 94, 87, 0.075);
+        }
+        .twitter:active {
+          background-color: rgba(15, 188, 249, 0.075);
+        }
+        .linkedin:active {
+          background-color: rgba(255, 168, 1, 0.075);
+        }
+      }
+
+      @media (hover: hover) {
+        a:hover {
+          color: rgba(255, 255, 255, 0.975);
+          padding-bottom: 9px;
+          font-weight: 400;
+          letter-spacing: 0.15em;
+          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.65), 0 5px 16px rgba(0, 0, 0, 0.55);
+        }
+        .github:hover {
+          background-color: rgba(11, 232, 129, 0.075);
+        }
+        .codepen:hover {
+          background-color: rgba(167, 79, 175, 0.075);
+        }
+        .medium:hover {
+          background-color: rgba(255, 94, 87, 0.075);
+        }
+        .twitter:hover {
+          background-color: rgba(15, 188, 249, 0.075);
+        }
+        .linkedin:hover {
+          background-color: rgba(255, 168, 1, 0.075);
+        }
+      }
+
+      @keyframes background-reveal {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes text-reveal {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 20px, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @keyframes link-reveal {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 25%, 0) scale3d(0.25, 0.25, 1);
+        }
+        50% {
+          transform: translate3d(0, -4%, 0) scale3d(1.025, 1.025, 1);
+        }
+        100% {
+          opacity: 1;
+          transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+        }
+      }
+    </style>
+  </head>
   <body ontouchstart="">
-		<div>
-			<h1>Jacob Beltran</h1>
-			<h2>Frontend Web Developer</h2>
-		</div>
+    <div>
+      <h1>Jacob Beltran</h1>
+      <h2>Frontend Web Developer</h2>
+    </div>
     <nav>
-			<a class="github" href="https://github.com/jacob-beltran">GitHub</a>
-			<a class="codepen" href="https://codepen.io/jacob-beltran/">CodePen</a>
+      <a class="github" href="https://github.com/jacob-beltran">GitHub</a>
+      <a class="codepen" href="https://codepen.io/jacob-beltran/">CodePen</a>
       <a class="medium" href="https://medium.com/@jacob_beltran">Medium</a>
       <a class="twitter" href="https://twitter.com/jacob_beltran">Twitter</a>
       <a class="linkedin" href="https://www.linkedin.com/in/jacobbeltran/">LinkedIn</a>
